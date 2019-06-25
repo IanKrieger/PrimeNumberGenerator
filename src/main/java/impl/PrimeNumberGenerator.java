@@ -1,3 +1,5 @@
+package impl;
+
 import java.util.List;
 
 public interface PrimeNumberGenerator {

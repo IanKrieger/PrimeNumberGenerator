@@ -20,7 +20,7 @@
 
 
     <build>
-        <finalName>PrimeNumberGenerator</finalName>
+        <finalName>impl.PrimeNumberGenerator</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -38,7 +38,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>    </mainClass>
+                            <mainClass>impl.PrimeNumberGenImpl</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
