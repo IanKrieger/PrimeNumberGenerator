@@ -1,2 +1,2 @@
-public interface PrimeNumberGeneratorTest {
+public class PrimeNumberGeneratorTest {
 }
