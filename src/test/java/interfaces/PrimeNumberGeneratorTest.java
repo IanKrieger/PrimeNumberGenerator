@@ -1,5 +1,7 @@
-package impl;
+package interfaces;
 
+import impl.PrimeNumberGenImpl;
+import interfaces.PrimeNumberGenerator;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
