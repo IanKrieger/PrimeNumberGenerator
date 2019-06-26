@@ -25,7 +25,7 @@ public class PrimeNumberGenApp {
 
             while (running) {
 
-                System.out.println("Do you want to generate or check a prime number? (generate[g]/check[c]): ");
+                System.out.println("Do you want to generate or check a prime number? (generate[g]/check[c]): \n");
                 String mode = inp.readLine();
 
                 if (mode.equalsIgnoreCase("check") || mode.equalsIgnoreCase("c")) {
@@ -34,7 +34,7 @@ public class PrimeNumberGenApp {
                     int num = Integer.valueOf(inp.readLine());
 
                     boolean isPrime = primeNumberGen.isPrime(num);
-                    System.out.println(isPrime ? "Number " + num + " is prime!" : "Number " + num + " is not prime");
+                    System.out.println(isPrime ? "\nNumber " + num + " is prime!" : "Number " + num + " is not prime");
 
                 } else if (mode.equalsIgnoreCase("generate") || mode.equalsIgnoreCase("g")) {
 
@@ -44,7 +44,7 @@ public class PrimeNumberGenApp {
                     System.out.println("Input the end of the range you want to generate: ");
                     int endPrime = Integer.valueOf(inp.readLine());
 
-                    System.out.println("The prime numbers between " + startPrime +
+                    System.out.println("\nThe prime numbers between " + startPrime +
                             " and " + endPrime + " are:\n");
 
                     List<Integer> primes = primeNumberGen.generate(startPrime, endPrime);
