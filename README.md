@@ -1,4 +1,4 @@
-# impl.PrimeNumberGenerator
+# PrimeNumberGenerator
 
 ## Important Stuff First - Running the project
 
