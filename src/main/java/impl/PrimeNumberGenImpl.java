@@ -23,8 +23,11 @@ public class PrimeNumberGenImpl implements PrimeNumberGenerator {
             endBound = endingValue;
         }
 
-        primeNumList.add(startBound);
-        primeNumList.add(endBound);
+        for(int i = startBound; i <= endBound ; i++) {
+            if(isPrime(i)) {
+                primeNumList.add(i);
+            }
+        }
 
         return primeNumList;
     }
