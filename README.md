@@ -23,7 +23,7 @@ Once installed open up a fresh command line in Windows, or terminal in Mac.
 ```
 Assuming maven is all good and working on your local, we can now generate the jar.
 
-To generate jar, make sure you are at the root of the project ../impl.PrimeNumberGenerator/..
+To generate jar, make sure you are at the root of the project ../PrimeNumberGenerator/..
 
 Then run:
 mvn clean install
@@ -31,11 +31,11 @@ mvn clean install
 To just run the test:
 mvn test
 
-Once the jar is generated you will find it at ../impl.PrimeNumberGenerator/target/impl.PrimeNumberGenerator.jar
-Here you can  run your: java -jar impl.PrimeNumberGenerator.jar  (and the command line app will run no problem!)
+Once the jar is generated you will find it at ../PrimeNumberGenerator/target/PrimeNumberGenerator.jar
+Here you can  run your: java -jar PrimeNumberGenerator.jar  (and the command line app will run no problem!)
 
 You can find the unit test coverage as well after the maven command in the location:
-../impl.PrimeNumberGenerator/target/site/jacoco/index.html
+../PrimeNumberGenerator/target/site/jacoco/index.html
 
 ```
 
