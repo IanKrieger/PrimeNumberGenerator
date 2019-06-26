@@ -13,9 +13,9 @@ public class PrimeNumberGenImpl implements PrimeNumberGenerator {
         int startBound;
         int endBound;
 
-        List<Integer> primeNumList  = new ArrayList<>();
+        List<Integer> primeNumList = new ArrayList<>();
 
-        if(endingValue > startingValue) {
+        if (startingValue > endingValue) {
             startBound = endingValue;
             endBound = startingValue;
         } else {
@@ -23,8 +23,12 @@ public class PrimeNumberGenImpl implements PrimeNumberGenerator {
             endBound = endingValue;
         }
 
-        for(int i = startBound; i <= endBound ; i++) {
-            if(isPrime(i)) {
+        if(startBound <= 2) {
+            startBound = 2;
+        }
+
+        for (int i = startBound; i <= endBound; i++) {
+            if (isPrime(i)) {
                 primeNumList.add(i);
             }
         }
@@ -34,6 +38,13 @@ public class PrimeNumberGenImpl implements PrimeNumberGenerator {
 
     @Override
     public boolean isPrime(int value) {
-        return false;
+
+        for (int i = 2; i*i <= value; i++) {
+            if (value % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

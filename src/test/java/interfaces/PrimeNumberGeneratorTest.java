@@ -20,7 +20,7 @@ public class PrimeNumberGeneratorTest {
 
     @Test
     public void generateTest() {
-        Assert.assertTrue(primeNumberGenerator.generate(2, 3).isEmpty());
+        Assert.assertTrue(primeNumberGenerator.generate(2, 3).size() == 2);
     }
 
     @Test
