@@ -25,12 +25,12 @@ public class PrimeNumberGenApp {
 
             while (running) {
 
-                System.out.println("Do you want to generate or check a prime number? (generate[g]/check[c]): \n");
+                System.out.println("Do you want to generate or check a prime number? (generate[g]/check[c]): ");
                 String mode = inp.readLine();
 
                 if (mode.equalsIgnoreCase("check") || mode.equalsIgnoreCase("c")) {
 
-                    System.out.println("Input a number to check: ");
+                    System.out.println("\nInput a number to check: ");
                     int num = Integer.valueOf(inp.readLine());
 
                     boolean isPrime = primeNumberGen.isPrime(num);
