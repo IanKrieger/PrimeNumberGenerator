@@ -21,9 +21,9 @@ public class PrimeNumberGenApp {
 
         boolean running = true;
 
-        while (running) {
+        try (BufferedReader inp = new BufferedReader(new InputStreamReader(System.in))) {
 
-            try (BufferedReader inp = new BufferedReader(new InputStreamReader(System.in))) {
+            while (running) {
 
                 System.out.println("Do you want to generate or check a prime number? (generate[g]/check[c]): ");
                 String mode = inp.readLine();
@@ -47,7 +47,7 @@ public class PrimeNumberGenApp {
                     System.out.println("The prime numbers between " + startPrime +
                             " and " + endPrime + " are:\n");
 
-                    List<Integer> primes = primeNumberGen.generate(startPrime,endPrime);
+                    List<Integer> primes = primeNumberGen.generate(startPrime, endPrime);
 
                     Collections.sort(primes);
 
@@ -63,14 +63,13 @@ public class PrimeNumberGenApp {
                 if (cont.equalsIgnoreCase("n") || cont.equalsIgnoreCase("no")) {
                     running = false;
                 } else {
+                    inp.mark(1);
                     inp.reset();
                 }
-
-            } catch (IOException e) {
-                System.out.println("Unable to get input from user. Exception message: " + e.getMessage());
             }
+
+        } catch (IOException e) {
+            System.out.println("Unable to get input from user. Exception message: " + e.getMessage());
         }
-
     }
-
 }
