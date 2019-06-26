@@ -17,4 +17,14 @@ public class PrimeNumberGenImplTest {
         Assert.assertFalse(primeNumberGen.isPrime(12));
     }
 
+    @Test
+    public void isPrimeTestVeryLargeNumberTrue() {
+        Assert.assertTrue(primeNumberGen.isPrime(433494437));
+    }
+
+    @Test
+    public void isPrimeTestVeryLargeNumberFalse() {
+        Assert.assertFalse(primeNumberGen.isPrime(1000000000));
+    }
+
 }
