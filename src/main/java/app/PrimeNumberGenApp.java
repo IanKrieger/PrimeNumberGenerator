@@ -12,12 +12,12 @@ public class PrimeNumberGenApp {
 
     private PrimeNumberGenImpl primeNumberGen = new PrimeNumberGenImpl();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         PrimeNumberGenApp app = new PrimeNumberGenApp();
         app.run();
     }
 
-    private void run() {
+    private void run() throws IOException {
 
         boolean running = true;
 
@@ -68,8 +68,6 @@ public class PrimeNumberGenApp {
                 }
             }
 
-        } catch (IOException e) {
-            System.out.println("Unable to get input from user. Exception message: " + e.getMessage());
         }
     }
 }

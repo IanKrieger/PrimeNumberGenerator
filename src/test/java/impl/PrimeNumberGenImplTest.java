@@ -2,8 +2,6 @@ package impl;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.experimental.theories.suppliers.TestedOn;
-import org.junit.rules.Stopwatch;
 
 import java.util.List;
 
@@ -60,7 +58,7 @@ public class PrimeNumberGenImplTest {
     @Test
     public void testGenerate7000Range() {
 
-        List<Integer> primeList =  primeNumberGen.generate(7900,7920);
+        List<Integer> primeList = primeNumberGen.generate(7900, 7920);
 
         Assert.assertEquals(primeList.size(), 3);
         Assert.assertTrue(primeList.contains(7901));
@@ -71,21 +69,21 @@ public class PrimeNumberGenImplTest {
 
     @Test
     public void testGenerateFirst1000Primes() {
-        Assert.assertEquals(1000, primeNumberGen.generate(2,7919).size());
+        Assert.assertEquals(1000, primeNumberGen.generate(2, 7919).size());
     }
 
     @Test
     public void testGenerateFirstPrimeAndSameRange() {
-        Assert.assertEquals(1, primeNumberGen.generate(2,2).size());
+        Assert.assertEquals(1, primeNumberGen.generate(2, 2).size());
     }
 
     @Test
     public void testGeneratePerformanceMillionPrimes() {
-        long startTime  =  System.nanoTime();
-        Assert.assertEquals(1000000, primeNumberGen.generate(2,15485863).size());
+        long startTime = System.nanoTime();
+        Assert.assertEquals(1000000, primeNumberGen.generate(2, 15485863).size());
         long endTime = System.nanoTime();
 
-        long timeElapsedMillis = (endTime - startTime)  / 1000000;
+        long timeElapsedMillis = (endTime - startTime) / 1000000;
 
         System.out.println("\nFirst Million Primes took " + timeElapsedMillis + "ms");
 

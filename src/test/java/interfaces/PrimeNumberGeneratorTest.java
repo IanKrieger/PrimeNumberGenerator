@@ -15,7 +15,7 @@ public class PrimeNumberGeneratorTest {
     private PrimeNumberGenerator primeNumberGenerator;
 
     public PrimeNumberGeneratorTest(PrimeNumberGenerator primeNumberGenerator) {
-        this.primeNumberGenerator  = primeNumberGenerator;
+        this.primeNumberGenerator = primeNumberGenerator;
     }
 
     @Test

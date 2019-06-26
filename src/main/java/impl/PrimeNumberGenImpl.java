@@ -23,7 +23,7 @@ public class PrimeNumberGenImpl implements PrimeNumberGenerator {
             endBound = endingValue;
         }
 
-        if(startBound <= 2) {
+        if (startBound <= 2) {
             startBound = 2;
         }
 
@@ -39,7 +39,7 @@ public class PrimeNumberGenImpl implements PrimeNumberGenerator {
     @Override
     public boolean isPrime(int value) {
 
-        for (int i = 2; i*i <= value; i++) {
+        for (int i = 2; i * i <= value; i++) {
             if (value % i == 0) {
                 return false;
             }
