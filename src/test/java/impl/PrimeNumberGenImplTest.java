@@ -67,4 +67,9 @@ public class PrimeNumberGenImplTest {
 
     }
 
+    @Test
+    public void testGenerateFirst1000Primes() {
+        Assert.assertEquals(1000, primeNumberGen.generate(2,7919).size());
+    }
+
 }
