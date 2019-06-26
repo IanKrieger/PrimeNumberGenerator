@@ -8,6 +8,8 @@ Tests can also be run from the command line, which will generate a human readabl
 This eliminates the need for an ide to run the project in any manner.
 This allows for easy git clone and run in under a minute.
 
+Coded in Java using Maven archetype, using the Intellij IDE.
+
 
 ### Installing maven:
 ```
