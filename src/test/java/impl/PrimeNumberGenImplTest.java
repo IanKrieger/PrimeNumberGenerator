@@ -55,4 +55,16 @@ public class PrimeNumberGenImplTest {
 
     }
 
+    @Test
+    public void testGenerate7000Range() {
+
+        List<Integer> primeList =  primeNumberGen.generate(7900,7920);
+
+        Assert.assertEquals(primeList.size(), 3);
+        Assert.assertTrue(primeList.contains(7901));
+        Assert.assertTrue(primeList.contains(7907));
+        Assert.assertTrue(primeList.contains(7919));
+
+    }
+
 }
