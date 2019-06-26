@@ -1,7 +1,6 @@
 package interfaces;
 
 import impl.PrimeNumberGenImpl;
-import interfaces.PrimeNumberGenerator;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +20,7 @@ public class PrimeNumberGeneratorTest {
 
     @Test
     public void generateTest() {
-        Assert.assertNull(primeNumberGenerator.generate(2,3));
+        Assert.assertEquals(2, primeNumberGenerator.generate(2, 3).size());
     }
 
     @Test
