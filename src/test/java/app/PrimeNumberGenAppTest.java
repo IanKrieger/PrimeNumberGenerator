@@ -28,11 +28,54 @@ public class PrimeNumberGenAppTest {
     }
 
     @Test
+    public void testCheckNonPrimeRun() {
+        try {
+            String mode = "check";
+            String numToCheck = "6";
+            String cont = "no";
+
+            String input = mode + System.getProperty("line.separator") + numToCheck
+                    + System.getProperty("line.separator")
+                    + cont;
+
+            System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+            PrimeNumberGenApp.main(new String[0]);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            System.setIn(System.in);
+        }
+    }
+
+    @Test
     public void testGeneratePrimeRun() {
         try {
             String mode = "g";
             String startNum = "2";
             String endNum = "12";
+            String cont = "n";
+
+            String input = mode + System.getProperty("line.separator") + startNum
+                    + System.getProperty("line.separator") + endNum
+                    + System.getProperty("line.separator") + cont;
+
+            System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+            PrimeNumberGenApp.main(new String[0]);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            System.setIn(System.in);
+        }
+    }
+
+    @Test
+    public void testGenerateSecondConditionPrimeRun() {
+        try {
+            String mode = "generate";
+            String startNum = "2";
+            String endNum = "3";
             String cont = "n";
 
             String input = mode + System.getProperty("line.separator") + startNum
