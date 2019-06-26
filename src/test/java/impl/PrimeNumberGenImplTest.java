@@ -3,17 +3,19 @@ package impl;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.List;
+
 public class PrimeNumberGenImplTest {
 
-    PrimeNumberGenImpl primeNumberGen  = new PrimeNumberGenImpl();
+    PrimeNumberGenImpl primeNumberGen = new PrimeNumberGenImpl();
 
     @Test
-    public void isPrimeTestTrue(){
+    public void isPrimeTestTrue() {
         Assert.assertTrue(primeNumberGen.isPrime(2));
     }
 
     @Test
-    public void isPrimeTestFalse(){
+    public void isPrimeTestFalse() {
         Assert.assertFalse(primeNumberGen.isPrime(12));
     }
 
@@ -25,6 +27,32 @@ public class PrimeNumberGenImplTest {
     @Test
     public void isPrimeTestVeryLargeNumberFalse() {
         Assert.assertFalse(primeNumberGen.isPrime(1000000000));
+    }
+
+    @Test
+    public void testGenerateForwardRangeOfNumbers() {
+
+        List<Integer> primeList = primeNumberGen.generate(1, 10);
+
+        Assert.assertEquals(4, primeList.size());
+        Assert.assertTrue(primeList.contains(2));
+        Assert.assertTrue(primeList.contains(3));
+        Assert.assertTrue(primeList.contains(5));
+        Assert.assertTrue(primeList.contains(7));
+
+    }
+
+    @Test
+    public void testGenerateBackwardsRangeOfNumbers() {
+
+        List<Integer> primeList = primeNumberGen.generate(10, 1);
+
+        Assert.assertEquals(4, primeList.size());
+        Assert.assertTrue(primeList.contains(2));
+        Assert.assertTrue(primeList.contains(3));
+        Assert.assertTrue(primeList.contains(5));
+        Assert.assertTrue(primeList.contains(7));
+
     }
 
 }
