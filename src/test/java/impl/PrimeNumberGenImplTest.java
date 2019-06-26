@@ -72,4 +72,9 @@ public class PrimeNumberGenImplTest {
         Assert.assertEquals(1000, primeNumberGen.generate(2,7919).size());
     }
 
+    @Test
+    public void testGenerateFirstPrimeAndSameRange() {
+        Assert.assertEquals(1, primeNumberGen.generate(2,2).size());
+    }
+
 }

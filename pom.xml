@@ -38,7 +38,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>impl.PrimeNumberGenImpl</mainClass>
+                            <mainClass>app.PrimeNumberGenApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
